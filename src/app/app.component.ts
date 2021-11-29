@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frost Mouse Studios';
-  title2 = 'Website coming soon'
 }

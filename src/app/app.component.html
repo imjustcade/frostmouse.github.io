@@ -1,11 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}
-    <br>
-    <br>
-    {{title2}}
-  </h1>
+  <div class="header">
+    <h1 [ngStyle]="{'color':'white'}">
+      <nav class="navbar navbar-extended navbar-dark bg-dark">
+        <a class="navbar-brand" routerLink="/">{{ title }}</a>
+        <a class="navbar-brand" routerLink="/games">Games</a>
+        <a class="navbar-brand" routerLink="/about">About</a>
+        <a class="navbar-brand" routerLink="/contact">Contact</a>
+      </nav>
+    </h1>
   </div>
+</div>
 
 <router-outlet></router-outlet>
