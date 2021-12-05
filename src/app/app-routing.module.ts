@@ -5,7 +5,7 @@ import { ContactComponent } from './contact';
 import { GamesComponent } from './games';
 import { HomeComponent } from './home';
 import { PrivacyComponent } from './privacy';
-import { TermsComponent } from './terms/terms.component';
+import { TermsComponent } from './terms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
