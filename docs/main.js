@@ -374,7 +374,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\r\n    <div class=\"header\">\r\n      <h1 [ngStyle]=\"{'color':'white'}\">\r\n          Home\r\n      </h1>\r\n      <a class=\"navbar-brand\" routerLink=\"/vain-miner-terms\">Terms</a>\r\n    </div>\r\n  </div>"
+module.exports = "<div style=\"text-align:center\">\r\n    <div class=\"header\">\r\n      <h1 [ngStyle]=\"{'color':'white'}\">\r\n          Home\r\n      </h1>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 
