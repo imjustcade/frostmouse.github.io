@@ -10,6 +10,7 @@ import { ContactComponent } from './contact';
 import { AboutComponent } from './about';
 import { PrivacyComponent } from './privacy';
 import { TermsComponent } from './terms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { TermsComponent } from './terms';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
