@@ -1,1 +1,1 @@
-ng build --baseHref="/"
+ng build --baseHref="/frostmouse.com/"
