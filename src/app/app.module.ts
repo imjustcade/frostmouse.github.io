@@ -8,6 +8,8 @@ import { GamesComponent } from './games';
 import { HomeComponent } from './home';
 import { ContactComponent } from './contact';
 import { AboutComponent } from './about';
+import { PrivacyComponent } from './privacy';
+import { TermsComponent } from './terms';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AboutComponent } from './about';
     HomeComponent,
     GamesComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
