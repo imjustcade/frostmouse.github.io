@@ -11,6 +11,9 @@ import { AboutComponent } from './about';
 import { PrivacyComponent } from './privacy';
 import { TermsComponent } from './terms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { openImageDialog, VainMinerComponent } from './games/Vain Miner';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,18 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ContactComponent,
     AboutComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    VainMinerComponent,
+    openImageDialog
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [openImageDialog]
 })
 export class AppModule { }

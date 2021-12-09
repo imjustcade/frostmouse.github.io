@@ -1,0 +1,28 @@
+.scale {
+    width: auto;
+    height: 250px;
+    border: 10px solid black;
+}
+.header {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+}
+.main {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+.grid {
+    padding: 20px;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+}
+.video {
+    margin: auto;
+    padding: 20px;
+    height: 600px;
+    width: auto;
+}

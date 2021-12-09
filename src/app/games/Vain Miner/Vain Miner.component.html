@@ -1,0 +1,13 @@
+<div class="main">
+    <video class="video" autoplay controls controlsList="nodownload" disablePictureInPicture loop>
+        <!-- <source src={{video}} type="video/mp4"> -->
+    </video>
+    <h1 class="header" [ngStyle]="{'color':'white'}">
+        Screenshots
+    </h1>
+    <div class="grid">
+        <div *ngFor="let img of images">
+            <img class="scale" src={{img}} (click)="openDialog(img)">
+        </div>
+    </div>
+</div>
