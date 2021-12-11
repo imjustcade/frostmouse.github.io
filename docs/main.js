@@ -46,13 +46,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+
 
 
 var AboutComponent = /** @class */ (function () {
-    function AboutComponent() {
+    function AboutComponent(shareimg) {
+        this.shareimg = shareimg;
+        shareimg.setLeftImage("/assets/mainimages/image1.PNG");
+        shareimg.setRightImage("/assets/mainimages/image1.PNG");
     }
     AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ template: __webpack_require__(/*! ./about.component.html */ "./src/app/about/about.component.html") })
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ template: __webpack_require__(/*! ./about.component.html */ "./src/app/about/about.component.html") }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_component__WEBPACK_IMPORTED_MODULE_2__["SharedImages"]])
     ], AboutComponent);
     return AboutComponent;
 }());
@@ -141,7 +147,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\r\n    background-color: rgb(0, 0, 0);\r\n    margin: 0 -9999rem;\r\n    padding: 5px 9999rem;\r\n}\r\n.navbar-brand {\r\n    padding: 5px .5em;\r\n    text-decoration: none;\r\n    color: #ffffff;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw4QkFBOEI7SUFDOUIsa0JBQWtCO0lBQ2xCLG9CQUFvQjtBQUN4QjtBQUNBO0lBQ0ksaUJBQWlCO0lBQ2pCLHFCQUFxQjtJQUNyQixjQUFjO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigwLCAwLCAwKTtcclxuICAgIG1hcmdpbjogMCAtOTk5OXJlbTtcclxuICAgIHBhZGRpbmc6IDVweCA5OTk5cmVtO1xyXG59XHJcbi5uYXZiYXItYnJhbmQge1xyXG4gICAgcGFkZGluZzogNXB4IC41ZW07XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBjb2xvcjogI2ZmZmZmZjtcclxufSJdfQ== */"
+module.exports = ".header {\r\n    background-color: rgb(0, 0, 0);\r\n    padding: 5px 10%;\r\n}\r\n.navbar-brand {\r\n    padding: 5px;\r\n    text-decoration: none;\r\n    color: #ffffff;\r\n    border: 2px solid white;\r\n    margin-right: 50px;\r\n}\r\n.leftimagecont {\r\n    width: 10vw;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n    position: absolute;\r\n    left: 0px;\r\n    top: 0px;\r\n    height: 100vh;\r\n    background-clip: border-box;\r\n    box-shadow: -10px 0px 10px 15px black;\r\n}\r\n.rightimagecont {\r\n    width: 10vw;\r\n    margin: 0 auto;\r\n    overflow: hidden;\r\n    position: absolute;\r\n    right: 17px;\r\n    top: 0px;\r\n    height: 100vh;\r\n    background-clip: border-box;\r\n    box-shadow: 10px 0px 10px 15px black;\r\n}\r\n.leftimage {\r\n    position: absolute;\r\n    height: 100vh;\r\n    left: 0;\r\n    top: 0px;\r\n    transform: scaleX(-1);\r\n}\r\n.rightimage {\r\n    position: absolute;\r\n    height: 100vh;\r\n    right: 0;\r\n    top: 0px;\r\n    overflow: hidden;\r\n}\r\n@media only screen and (max-width: 1080px) {\r\n    .rightimagecont {\r\n        width: 0px;\r\n    }\r\n    .leftimagecont {\r\n        width: 0px;\r\n    }\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSw4QkFBOEI7SUFDOUIsZ0JBQWdCO0FBQ3BCO0FBQ0E7SUFDSSxZQUFZO0lBQ1oscUJBQXFCO0lBQ3JCLGNBQWM7SUFDZCx1QkFBdUI7SUFDdkIsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsY0FBYztJQUNkLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsU0FBUztJQUNULFFBQVE7SUFDUixhQUFhO0lBQ2IsMkJBQTJCO0lBQzNCLHFDQUFxQztBQUN6QztBQUNBO0lBQ0ksV0FBVztJQUNYLGNBQWM7SUFDZCxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxRQUFRO0lBQ1IsYUFBYTtJQUNiLDJCQUEyQjtJQUMzQixvQ0FBb0M7QUFDeEM7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsT0FBTztJQUNQLFFBQVE7SUFDUixxQkFBcUI7QUFDekI7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsUUFBUTtJQUNSLFFBQVE7SUFDUixnQkFBZ0I7QUFDcEI7QUFFQTtJQUNJO1FBQ0ksVUFBVTtJQUNkO0lBQ0E7UUFDSSxVQUFVO0lBQ2Q7RUFDRiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgMCwgMCk7XHJcbiAgICBwYWRkaW5nOiA1cHggMTAlO1xyXG59XHJcbi5uYXZiYXItYnJhbmQge1xyXG4gICAgcGFkZGluZzogNXB4O1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgY29sb3I6ICNmZmZmZmY7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCB3aGl0ZTtcclxuICAgIG1hcmdpbi1yaWdodDogNTBweDtcclxufVxyXG4ubGVmdGltYWdlY29udCB7XHJcbiAgICB3aWR0aDogMTB2dztcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIGJhY2tncm91bmQtY2xpcDogYm9yZGVyLWJveDtcclxuICAgIGJveC1zaGFkb3c6IC0xMHB4IDBweCAxMHB4IDE1cHggYmxhY2s7XHJcbn1cclxuLnJpZ2h0aW1hZ2Vjb250IHtcclxuICAgIHdpZHRoOiAxMHZ3O1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgcmlnaHQ6IDE3cHg7XHJcbiAgICB0b3A6IDBweDtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbiAgICBiYWNrZ3JvdW5kLWNsaXA6IGJvcmRlci1ib3g7XHJcbiAgICBib3gtc2hhZG93OiAxMHB4IDBweCAxMHB4IDE1cHggYmxhY2s7XHJcbn1cclxuLmxlZnRpbWFnZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgbGVmdDogMDtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgdHJhbnNmb3JtOiBzY2FsZVgoLTEpO1xyXG59XHJcbi5yaWdodGltYWdlIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMDgwcHgpIHtcclxuICAgIC5yaWdodGltYWdlY29udCB7XHJcbiAgICAgICAgd2lkdGg6IDBweDtcclxuICAgIH1cclxuICAgIC5sZWZ0aW1hZ2Vjb250IHtcclxuICAgICAgICB3aWR0aDogMHB4O1xyXG4gICAgfVxyXG4gIH0iXX0= */"
 
 /***/ }),
 
@@ -152,7 +158,7 @@ module.exports = ".header {\r\n    background-color: rgb(0, 0, 0);\r\n    margin
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <div class=\"header\">\r\n    <h1 [ngStyle]=\"{'color':'white'}\">\r\n      <nav class=\"navbar navbar-extended navbar-dark bg-dark\">\r\n        <a class=\"navbar-brand\" routerLink=\"/\">{{ title }}</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/games\">Games</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/about\">About</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/contact\">Contact</a>\r\n      </nav>\r\n    </h1>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <div class=\"leftimagecont\">\r\n    <img id=\"leftimage\" class=\"leftimage\" src={{image}}>\r\n  </div>\r\n  <div class=\"rightimagecont\">\r\n    <img id=\"rightimage\" class=\"rightimage\" src={{image}}>\r\n  </div>\r\n  <div class=\"header\">\r\n    <h1 [ngStyle]=\"{'color':'white'}\">\r\n      <nav class=\"navbar navbar-extended navbar-dark bg-dark\">\r\n        <a class=\"navbar-brand\" routerLink=\"/\">{{ title }}</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/games\">Games</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/about\">About</a>\r\n        <a class=\"navbar-brand\" routerLink=\"/contact\">Contact</a>\r\n      </nav>\r\n    </h1>\r\n  </div>\r\n</div>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -160,12 +166,13 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
   \**********************************/
-/*! exports provided: AppComponent */
+/*! exports provided: AppComponent, SharedImages */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedImages", function() { return SharedImages; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
@@ -173,6 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'Frost Mouse Studios';
+        this.image = "/assets/mainimages/image1.PNG";
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -182,6 +190,27 @@ var AppComponent = /** @class */ (function () {
         })
     ], AppComponent);
     return AppComponent;
+}());
+
+var leftLoaded = false;
+var rightLoaded = false;
+var SharedImages = /** @class */ (function () {
+    function SharedImages() {
+        this.leftLoaded = false;
+        this.rightLoaded = false;
+    }
+    SharedImages.prototype.setLeftImage = function (passimg) {
+        this.leftimg = document.getElementById("leftimage");
+        this.leftimg.src = passimg;
+    };
+    SharedImages.prototype.setRightImage = function (passimg) {
+        this.rightimg = document.getElementById("rightimage");
+        this.rightimg.src = passimg;
+    };
+    SharedImages = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], SharedImages);
+    return SharedImages;
 }());
 
 
@@ -248,7 +277,7 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_12__["NoopAnimationsModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_13__["MatDialogModule"]
             ],
-            providers: [],
+            providers: [_app_component__WEBPACK_IMPORTED_MODULE_4__["SharedImages"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
             entryComponents: [_games_Vain_Miner__WEBPACK_IMPORTED_MODULE_11__["openImageDialog"]]
         })
@@ -283,13 +312,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+
 
 
 var ContactComponent = /** @class */ (function () {
-    function ContactComponent() {
+    function ContactComponent(shareimg) {
+        this.shareimg = shareimg;
+        shareimg.setLeftImage("/assets/mainimages/image1.PNG");
+        shareimg.setRightImage("/assets/mainimages/image1.PNG");
     }
     ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ template: __webpack_require__(/*! ./contact.component.html */ "./src/app/contact/contact.component.html") })
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({ template: __webpack_require__(/*! ./contact.component.html */ "./src/app/contact/contact.component.html") }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_component__WEBPACK_IMPORTED_MODULE_2__["SharedImages"]])
     ], ContactComponent);
     return ContactComponent;
 }());
@@ -322,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".scale {\r\n    width: auto;\r\n    height: 250px;\r\n    border: 10px solid black;\r\n}\r\n.header {\r\n    margin: auto;\r\n    text-align: center;\r\n    background-color: black;\r\n}\r\n.main {\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    justify-content: center;\r\n}\r\n.grid {\r\n    padding: 20px;\r\n    display: inline-grid;\r\n    grid-template-columns: repeat(3, 1fr);\r\n    -moz-column-gap: 20px;\r\n         column-gap: 20px;\r\n    row-gap: 10px;\r\n}\r\n.video {\r\n    margin: auto;\r\n    padding: 20px;\r\n    height: 600px;\r\n    width: auto;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZXMvVmFpbiBNaW5lci9WYWluIE1pbmVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLHdCQUF3QjtBQUM1QjtBQUNBO0lBQ0ksWUFBWTtJQUNaLGtCQUFrQjtJQUNsQix1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLHFDQUFxQztJQUNyQyxxQkFBZ0I7U0FBaEIsZ0JBQWdCO0lBQ2hCLGFBQWE7QUFDakI7QUFDQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsYUFBYTtJQUNiLFdBQVc7QUFDZiIsImZpbGUiOiJzcmMvYXBwL2dhbWVzL1ZhaW4gTWluZXIvVmFpbiBNaW5lci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNjYWxlIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgaGVpZ2h0OiAyNTBweDtcclxuICAgIGJvcmRlcjogMTBweCBzb2xpZCBibGFjaztcclxufVxyXG4uaGVhZGVyIHtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59XHJcbi5tYWluIHtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLmdyaWQge1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMywgMWZyKTtcclxuICAgIGNvbHVtbi1nYXA6IDIwcHg7XHJcbiAgICByb3ctZ2FwOiAxMHB4O1xyXG59XHJcbi52aWRlbyB7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICBwYWRkaW5nOiAyMHB4O1xyXG4gICAgaGVpZ2h0OiA2MDBweDtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG59Il19 */"
+module.exports = ".scale {\r\n    width: auto;\r\n    height: 250px;\r\n    border: 10px solid black;\r\n}\r\n.header {\r\n    margin: auto;\r\n    text-align: center;\r\n    background-color: black;\r\n}\r\n.main {\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    justify-content: center;\r\n}\r\n.paragraph {\r\n    text-align: center;\r\n    margin-left: 20%;\r\n    margin-right: 20%;\r\n    font-size: 25px;\r\n}\r\n.grid {\r\n    padding: 20px;\r\n    display: inline-grid;\r\n    grid-template-columns: repeat(3, 1fr);\r\n    -moz-column-gap: 20px;\r\n         column-gap: 20px;\r\n    row-gap: 10px;\r\n}\r\n@media only screen and (max-width: 1845px) {\r\n    .grid {\r\n        padding: 20px;\r\n        display: inline-grid;\r\n        grid-template-columns: repeat(2, 1fr);\r\n        -moz-column-gap: 20px;\r\n             column-gap: 20px;\r\n        row-gap: 10px;\r\n    }\r\n  }\r\n@media only screen and (max-width: 1245px) {\r\n      .grid {\r\n          padding: 20px;\r\n          display: inline-grid;\r\n          grid-template-columns: repeat(1, 1fr);\r\n          -moz-column-gap: 20px;\r\n               column-gap: 20px;\r\n          row-gap: 10px;\r\n      }\r\n    }\r\n.video {\r\n    margin: auto;\r\n    padding: 20px;\r\n    height: auto;\r\n    width: 50vw;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZXMvVmFpbiBNaW5lci9WYWluIE1pbmVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLHdCQUF3QjtBQUM1QjtBQUNBO0lBQ0ksWUFBWTtJQUNaLGtCQUFrQjtJQUNsQix1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixlQUFlO0FBQ25CO0FBQ0E7SUFDSSxhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLHFDQUFxQztJQUNyQyxxQkFBZ0I7U0FBaEIsZ0JBQWdCO0lBQ2hCLGFBQWE7QUFDakI7QUFDQTtJQUNJO1FBQ0ksYUFBYTtRQUNiLG9CQUFvQjtRQUNwQixxQ0FBcUM7UUFDckMscUJBQWdCO2FBQWhCLGdCQUFnQjtRQUNoQixhQUFhO0lBQ2pCO0VBQ0Y7QUFDQTtNQUNJO1VBQ0ksYUFBYTtVQUNiLG9CQUFvQjtVQUNwQixxQ0FBcUM7VUFDckMscUJBQWdCO2VBQWhCLGdCQUFnQjtVQUNoQixhQUFhO01BQ2pCO0lBQ0Y7QUFDSjtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsWUFBWTtJQUNaLFdBQVc7QUFDZiIsImZpbGUiOiJzcmMvYXBwL2dhbWVzL1ZhaW4gTWluZXIvVmFpbiBNaW5lci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNjYWxlIHtcclxuICAgIHdpZHRoOiBhdXRvO1xyXG4gICAgaGVpZ2h0OiAyNTBweDtcclxuICAgIGJvcmRlcjogMTBweCBzb2xpZCBibGFjaztcclxufVxyXG4uaGVhZGVyIHtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59XHJcbi5tYWluIHtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLnBhcmFncmFwaCB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW4tbGVmdDogMjAlO1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAyMCU7XHJcbiAgICBmb250LXNpemU6IDI1cHg7XHJcbn1cclxuLmdyaWQge1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMywgMWZyKTtcclxuICAgIGNvbHVtbi1nYXA6IDIwcHg7XHJcbiAgICByb3ctZ2FwOiAxMHB4O1xyXG59XHJcbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogMTg0NXB4KSB7XHJcbiAgICAuZ3JpZCB7XHJcbiAgICAgICAgcGFkZGluZzogMjBweDtcclxuICAgICAgICBkaXNwbGF5OiBpbmxpbmUtZ3JpZDtcclxuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgyLCAxZnIpO1xyXG4gICAgICAgIGNvbHVtbi1nYXA6IDIwcHg7XHJcbiAgICAgICAgcm93LWdhcDogMTBweDtcclxuICAgIH1cclxuICB9XHJcbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAxMjQ1cHgpIHtcclxuICAgICAgLmdyaWQge1xyXG4gICAgICAgICAgcGFkZGluZzogMjBweDtcclxuICAgICAgICAgIGRpc3BsYXk6IGlubGluZS1ncmlkO1xyXG4gICAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMSwgMWZyKTtcclxuICAgICAgICAgIGNvbHVtbi1nYXA6IDIwcHg7XHJcbiAgICAgICAgICByb3ctZ2FwOiAxMHB4O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbi52aWRlbyB7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICBwYWRkaW5nOiAyMHB4O1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG4gICAgd2lkdGg6IDUwdnc7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -333,7 +368,7 @@ module.exports = ".scale {\r\n    width: auto;\r\n    height: 250px;\r\n    bord
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n    <video class=\"video\" autoplay controls controlsList=\"nodownload\" disablePictureInPicture loop>\r\n        <!-- <source src={{video}} type=\"video/mp4\"> -->\r\n    </video>\r\n    <h1 class=\"header\" [ngStyle]=\"{'color':'white'}\">\r\n        Screenshots\r\n    </h1>\r\n    <div class=\"grid\">\r\n        <div *ngFor=\"let img of images\">\r\n            <img class=\"scale\" src={{img}} (click)=\"openDialog(img)\">\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"main\">\r\n    <video class=\"video\" autoplay controls controlsList=\"nodownload\" disablePictureInPicture loop>\r\n        <!-- <source src={{video}} type=\"video/mp4\"> -->\r\n    </video>\r\n    <h1 class=\"header\" [ngStyle]=\"{'color':'white'}\">\r\n        About Vain Miner\r\n    </h1>\r\n    <p class=\"paragraph\" [ngStyle]=\"{'color':'white'}\">\r\n        Collect ore as you mine out the world so you can upgrade your ship to go deeper. As you go deeper the ores will become more valuable and the journey back home will become harder. \r\n        Don't let your drill run out of fuel or hit the ground too hard because you'll lose your hard-earned money. Purchase items to help you with your journey to become the best miner around. \r\n        Dynamite will help you clear out tiles above to reach ore that isn't in your tunnel's path or save you from running out of fuel a row under your escape route. \r\n        Flares can be used to help you find your way back, or see what's not in range of your light. \r\n        Complete contracts to gain a bonus payment for the ores you collect or sell them for a standard price at the Miner’s Market. \r\n        Will all your efforts be in Vain or will you be able to make it to the top by making it to the bottom?\r\n    </p>\r\n    <h1 class=\"header\" [ngStyle]=\"{'color':'white'}\">\r\n        Screenshots\r\n    </h1>\r\n    <div class=\"grid\">\r\n        <div *ngFor=\"let img of images\">\r\n            <img class=\"scale\" src={{img}} (click)=\"openDialog(img)\">\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -351,12 +386,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm5/dialog.es5.js");
+/* harmony import */ var src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.component */ "./src/app/app.component.ts");
+
 
 
 
 var VainMinerComponent = /** @class */ (function () {
-    function VainMinerComponent(dialog) {
+    function VainMinerComponent(dialog, shareimg) {
         this.dialog = dialog;
+        this.shareimg = shareimg;
         this.images = [
             "/assets/Vain Miner/1.PNG",
             "/assets/Vain Miner/2.PNG",
@@ -365,6 +403,8 @@ var VainMinerComponent = /** @class */ (function () {
             "/assets/Vain Miner/5.PNG"
         ];
         this.video = "/assets/Vain Miner/video.mp4";
+        shareimg.setLeftImage("/assets/Vain Miner/side1.PNG");
+        shareimg.setRightImage("/assets/Vain Miner/side2.PNG");
     }
     VainMinerComponent.prototype.openDialog = function (imageName) {
         this.dialog.open(openImageDialog, {
@@ -381,7 +421,7 @@ var VainMinerComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./Vain Miner.component.html */ "./src/app/games/Vain Miner/Vain Miner.component.html"),
             styles: [__webpack_require__(/*! ./Vain Miner.component.css */ "./src/app/games/Vain Miner/Vain Miner.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_2__["MatDialog"], src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["SharedImages"]])
     ], VainMinerComponent);
     return VainMinerComponent;
 }());
@@ -482,7 +522,7 @@ module.exports = "<div class=\"parent\">\r\n    <button class=\"leftB\" (click)=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".scroll {\r\n    max-height: 100vh;\r\n}\r\n.main {\r\n    padding: 20px;\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fill, minmax(640px, 1fr));\r\n    -moz-column-gap: 20px;\r\n         column-gap: 20px;\r\n    row-gap: 60px;\r\n    justify-content: center;\r\n}\r\n.games {\r\n    width: 500px;\r\n    border: 2px solid rgb(214, 214, 214);\r\n    margin: auto;\r\n}\r\n.images {\r\n    white-space: nowrap;\r\n    overflow-x: auto;\r\n}\r\n.scale {\r\n    width: 500px;\r\n    height: auto;\r\n}\r\n.header {\r\n    margin: auto;\r\n    background-color: black;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZXMvZ2FtZXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLGFBQWE7SUFDYiw0REFBNEQ7SUFDNUQscUJBQWdCO1NBQWhCLGdCQUFnQjtJQUNoQixhQUFhO0lBQ2IsdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osb0NBQW9DO0lBQ3BDLFlBQVk7QUFDaEI7QUFDQTtJQUNJLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLFlBQVk7SUFDWixZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osdUJBQXVCO0FBQzNCIiwiZmlsZSI6InNyYy9hcHAvZ2FtZXMvZ2FtZXMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zY3JvbGwge1xyXG4gICAgbWF4LWhlaWdodDogMTAwdmg7XHJcbn1cclxuLm1haW4ge1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCg2NDBweCwgMWZyKSk7XHJcbiAgICBjb2x1bW4tZ2FwOiAyMHB4O1xyXG4gICAgcm93LWdhcDogNjBweDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5nYW1lcyB7XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZ2IoMjE0LCAyMTQsIDIxNCk7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbn1cclxuLmltYWdlcyB7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgb3ZlcmZsb3cteDogYXV0bztcclxufVxyXG4uc2NhbGUge1xyXG4gICAgd2lkdGg6IDUwMHB4O1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG59XHJcbi5oZWFkZXIge1xyXG4gICAgbWFyZ2luOiBhdXRvO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn0iXX0= */"
+module.exports = ".scroll {\r\n    max-height: 100vh;\r\n}\r\n.main {\r\n    padding: 20px;\r\n    padding-left: 10vw;\r\n    padding-right: 10vw;\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fill, minmax(640px, 1fr));\r\n    -moz-column-gap: 20px;\r\n         column-gap: 20px;\r\n    row-gap: 60px;\r\n    justify-content: center;\r\n}\r\n.games {\r\n    width: 500px;\r\n    border: 2px solid rgb(214, 214, 214);\r\n    margin: auto;\r\n}\r\n.images {\r\n    white-space: nowrap;\r\n    overflow-x: auto;\r\n}\r\n.scale {\r\n    width: 500px;\r\n    height: auto;\r\n}\r\n.header {\r\n    margin: auto;\r\n    background-color: black;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ2FtZXMvZ2FtZXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsYUFBYTtJQUNiLDREQUE0RDtJQUM1RCxxQkFBZ0I7U0FBaEIsZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYix1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLFlBQVk7SUFDWixvQ0FBb0M7SUFDcEMsWUFBWTtBQUNoQjtBQUNBO0lBQ0ksbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksWUFBWTtJQUNaLFlBQVk7QUFDaEI7QUFDQTtJQUNJLFlBQVk7SUFDWix1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9nYW1lcy9nYW1lcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNjcm9sbCB7XHJcbiAgICBtYXgtaGVpZ2h0OiAxMDB2aDtcclxufVxyXG4ubWFpbiB7XHJcbiAgICBwYWRkaW5nOiAyMHB4O1xyXG4gICAgcGFkZGluZy1sZWZ0OiAxMHZ3O1xyXG4gICAgcGFkZGluZy1yaWdodDogMTB2dztcclxuICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCg2NDBweCwgMWZyKSk7XHJcbiAgICBjb2x1bW4tZ2FwOiAyMHB4O1xyXG4gICAgcm93LWdhcDogNjBweDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5nYW1lcyB7XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBib3JkZXI6IDJweCBzb2xpZCByZ2IoMjE0LCAyMTQsIDIxNCk7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbn1cclxuLmltYWdlcyB7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgb3ZlcmZsb3cteDogYXV0bztcclxufVxyXG4uc2NhbGUge1xyXG4gICAgd2lkdGg6IDUwMHB4O1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG59XHJcbi5oZWFkZXIge1xyXG4gICAgbWFyZ2luOiBhdXRvO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -509,17 +549,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GamesComponent", function() { return GamesComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+
 
 
 var GamesComponent = /** @class */ (function () {
-    function GamesComponent() {
+    function GamesComponent(shareimg) {
+        this.shareimg = shareimg;
         this.gameList = games;
+        shareimg.setLeftImage("/assets/mainimages/image1.PNG");
+        shareimg.setRightImage("/assets/mainimages/image1.PNG");
     }
     GamesComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             template: __webpack_require__(/*! ./games.component.html */ "./src/app/games/games.component.html"),
             styles: [__webpack_require__(/*! ./games.component.css */ "./src/app/games/games.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_component__WEBPACK_IMPORTED_MODULE_2__["SharedImages"]])
     ], GamesComponent);
     return GamesComponent;
 }());
@@ -585,18 +631,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.component */ "./src/app/app.component.ts");
+
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(shareimg) {
+        this.shareimg = shareimg;
         this.title = 'Frost Mouse Studios';
+        shareimg.setLeftImage("/assets/mainimages/image1.PNG");
+        shareimg.setRightImage("/assets/mainimages/image1.PNG");
     }
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_app_component__WEBPACK_IMPORTED_MODULE_2__["SharedImages"]])
     ], HomeComponent);
     return HomeComponent;
 }());
