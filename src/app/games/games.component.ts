@@ -1,5 +1,6 @@
 import { templateJitUrl } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { SharedImages } from '../app.component';
 
 @Component
 ({ 
@@ -8,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class GamesComponent {
     gameList = games;
+    constructor(private shareimg: SharedImages) {
+        shareimg.setLeftImage("/assets/mainimages/image1.PNG");
+        shareimg.setRightImage("/assets/mainimages/image1.PNG");
+    }
 }
 
 interface Game 

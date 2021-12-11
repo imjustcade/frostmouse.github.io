@@ -2,6 +2,7 @@ import { templateJitUrl } from '@angular/compiler';
 import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Data } from '@angular/router';
+import { SharedImages } from 'src/app/app.component';
 
 @Component
 ({ 
@@ -9,7 +10,11 @@ import { Data } from '@angular/router';
     styleUrls: ['./Vain Miner.component.css']
 })
 export class VainMinerComponent {
-    constructor(public dialog: MatDialog) {}
+    constructor(public dialog: MatDialog, private shareimg: SharedImages) {
+        shareimg.setLeftImage("/assets/Vain Miner/side1.PNG");
+        shareimg.setRightImage("/assets/Vain Miner/side2.PNG");
+    }
+
     images = 
     [
         "/assets/Vain Miner/1.PNG",
@@ -29,7 +34,9 @@ export class VainMinerComponent {
             panelClass: 'custom-dialog-container',
             backdropClass: 'backdropBackground'
         });
+        
     }
+    
 
     video = "/assets/Vain Miner/video.mp4"
 }

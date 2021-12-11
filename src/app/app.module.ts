@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
+import { AppComponent, SharedImages } from './app.component';
 import { GamesComponent } from './games';
 import { HomeComponent } from './home';
 import { ContactComponent } from './contact';
@@ -33,7 +33,7 @@ import { MatDialogModule } from '@angular/material';
     NoopAnimationsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [SharedImages],
   bootstrap: [AppComponent],
   entryComponents: [openImageDialog]
 })

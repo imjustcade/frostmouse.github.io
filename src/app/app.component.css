@@ -1,10 +1,56 @@
 .header {
     background-color: rgb(0, 0, 0);
-    margin: 0 -9999rem;
-    padding: 5px 9999rem;
+    padding: 5px 10%;
 }
 .navbar-brand {
-    padding: 5px .5em;
+    padding: 5px;
     text-decoration: none;
     color: #ffffff;
+    border: 2px solid white;
+    margin-right: 50px;
 }
+.leftimagecont {
+    width: 10vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    background-clip: border-box;
+    box-shadow: -10px 0px 10px 15px black;
+}
+.rightimagecont {
+    width: 10vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    right: 17px;
+    top: 0px;
+    height: 100vh;
+    background-clip: border-box;
+    box-shadow: 10px 0px 10px 15px black;
+}
+.leftimage {
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0px;
+    transform: scaleX(-1);
+}
+.rightimage {
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    top: 0px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1080px) {
+    .rightimagecont {
+        width: 0px;
+    }
+    .leftimagecont {
+        width: 0px;
+    }
+  }
