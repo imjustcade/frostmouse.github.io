@@ -1,0 +1,9 @@
+.main {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
