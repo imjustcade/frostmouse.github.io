@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent, SharedImages } from './app.component';
 import { GamesComponent } from './games';
 import { HomeComponent } from './home';
-import { ContactComponent } from './contact';
 import { AboutComponent } from './about';
 import { PrivacyComponent } from './privacy';
 import { TermsComponent } from './terms';
@@ -20,7 +19,6 @@ import { MatDialogModule } from '@angular/material';
     AppComponent,
     HomeComponent,
     GamesComponent,
-    ContactComponent,
     AboutComponent,
     PrivacyComponent,
     TermsComponent,

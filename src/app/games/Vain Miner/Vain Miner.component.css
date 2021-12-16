@@ -2,6 +2,7 @@
     width: 450px;
     border: 2px solid black;
     margin: auto;
+    max-width: 77vw;
 }
 .header {
     margin: auto;
@@ -28,6 +29,7 @@
     column-gap: 20px;
     row-gap: 10px;
     justify-content: center;
+    max-width: 77vw;
 }
 .video {
     margin: auto;
@@ -41,4 +43,14 @@
     background-image: url("/assets/Vain Miner/side2.PNG");
     background-size: auto 100%;
     background-position-x: 95%;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    ::ng-deep ::-webkit-scrollbar-track {
+      background: #000000;
+      background-image: none;
+    }
+    .scale {
+        pointer-events: none;
+    }
   }

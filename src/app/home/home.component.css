@@ -1,3 +1,9 @@
+.header {
+  font-size: 60px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 /* Track */
 ::ng-deep ::-webkit-scrollbar-track {
     background-color: #5fcde4;

@@ -7,22 +7,26 @@
     column-gap: 20px;
     row-gap: 60px;
     justify-content: center;
+    max-width: 77vw;
 }
 .games {
     width: 450px;
     border: 2px solid rgb(214, 214, 214);
     margin: auto;
+    max-width: 77vw;
 }
 .images {
     overflow-x: auto;
     width: 450px;
     text-decoration: none;
     color: #ffffff;
+    max-width: 77vw;
 }
 .scale {
     width: 450px;
     height: auto;
     display: block;
+    max-width: 77vw;
 }
 .header {
     margin: auto;
