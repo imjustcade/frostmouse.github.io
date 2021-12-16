@@ -1,6 +1,30 @@
+#hamnav {
+    height: 100%;
+    background: rgb(0, 0, 0);
+  }
+  
+  #hamitems { display: block; }
+  #hamitems a, img {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #hamitems a:hover, img:hover { background: #5fcde4; }
+  
+  #hamnav label, #hamburger { display: none; }
+
 .header {
     background-color: rgb(0, 0, 0);
     padding: 5px 10%;
+}
+.firstnavbar {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 50px;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
 }
 .navbar-brand {
     padding: 5px;
@@ -9,48 +33,48 @@
     border: 2px solid white;
     margin-right: 50px;
 }
-.leftimagecont {
-    width: 10vw;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 100vh;
-    background-clip: border-box;
-    box-shadow: -10px 0px 10px 15px black;
-}
-.rightimagecont {
-    width: 10vw;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    right: 17px;
-    top: 0px;
-    height: 100vh;
-    background-clip: border-box;
-    box-shadow: 10px 0px 10px 15px black;
-}
-.leftimage {
-    position: absolute;
-    height: 100vh;
-    left: 0;
-    top: 0px;
-    transform: scaleX(-1);
-}
-.rightimage {
-    position: absolute;
-    height: 100vh;
-    right: 0;
-    top: 0px;
-    overflow: hidden;
+.lastnavbar {
+    padding: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid white;
 }
 
 @media only screen and (max-width: 1080px) {
-    .rightimagecont {
-        width: 0px;
-    }
-    .leftimagecont {
-        width: 0px;
-    }
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+      }
+     
+      #hamnav label { 
+        display: inline-block; 
+        color: white;
+        background: #000000;
+        font-style: normal;
+        font-size: 50px;
+        position: relative;
+        left: 10px;
+        margin: 0;
+        width: 60px;
+      }
+      #hamnav img {
+          display: inline-block;
+          color: white;
+          background: #000000;
+          font-style: normal;
+          font-size: 50px;
+          position: relative;
+          left: calc(50% - 50px);
+          width: 100px;
+          margin-top: -100px;
+      }
+
+      .header {
+          text-align: left;
+      }
+    
+      #hamitems a { display: none; }
+      #hamnav input:checked ~ #hamitems a { display: block; }
   }

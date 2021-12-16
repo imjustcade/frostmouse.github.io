@@ -1,10 +1,10 @@
-<div class="scroll" style="text-align:center">
+<div style="text-align:center">
     <div class="main">
       <div class="games" [style.height.px]="height" *ngFor="let game of gameList">
-        <h1 class="header" [ngStyle]="{'color':'white'}">
-          {{game.name}}
-        </h1>
         <a class="images" href="/games/{{game.name}}">
+          <h1 class="header" [ngStyle]="{'color':'white'}">
+            {{game.name}}
+          </h1>
           <img class="scale" src={{game.image}}>
         </a>
       </div>

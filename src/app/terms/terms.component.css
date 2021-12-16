@@ -7,3 +7,8 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: white;
 }
+/* Track */
+::ng-deep ::-webkit-scrollbar-track {
+    background-color: #5fcde4;
+    background-image: none;
+  }

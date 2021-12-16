@@ -8,6 +8,11 @@ import { Component, Injectable } from '@angular/core';
 export class AppComponent {
   title = 'Frost Mouse Studios';
   image = "/assets/mainimages/image1.PNG";
+  hamburgerClose()
+  {
+    let checkbox = document.getElementById("hamburger") as HTMLInputElement;
+    checkbox.checked = false;
+  }
 }
 
 let leftLoaded = false;
