@@ -1,0 +1,28 @@
+<div class="main">
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/2wO7XLHWwz0?controls=1&rel=0&loop=1&playlist=2wO7XLHWwz0&autoplay=1&showinfo=0" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay data-keepplaying>
+    </iframe>
+    <h1 class="header" [ngStyle]="{'color':'white'}">
+        About Polyvade
+    </h1>
+    <p class="paragraph" [ngStyle]="{'color':'white'}">
+        Dodge obstacles as they fall. Reaction is everything. Every point you get your speed slightly increases. How far can you go before it's too fast for you?
+    </p>
+    <!-- <div class="badges">
+        <a href='https://play.google.com/store/apps/details?id=com.FrostMouseStudios.IMAMiner&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="display: inline-block">
+            <img class="gpbadge" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+        </a>
+        <a href="https://apps.apple.com/us/app/ima-miner/id1603924325?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px;">
+            <img class="applebadge" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1641600000&h=99bf4fd7dd02c444a56bd3c2b97d9762" 
+            alt="Download on the App Store" style="border-radius: 13px;">
+        </a>
+    </div> -->
+    <h1 class="header" [ngStyle]="{'color':'white'}">
+        Screenshots
+    </h1>
+    <div class="grid">
+        <div *ngFor="let img of images">
+            <img class="scale" [src]="img" (click)="openDialog(img)">
+        </div>
+    </div>
+</div>

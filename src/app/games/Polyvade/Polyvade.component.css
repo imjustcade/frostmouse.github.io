@@ -1,0 +1,66 @@
+.scale {
+    width: 450px;
+    border: 2px solid black;
+    margin: auto;
+    max-width: 77vw;
+}
+.header {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+}
+.main {
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+.paragraph {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 25px;
+}
+.grid {
+    padding: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    column-gap: 20px;
+    row-gap: 10px;
+    justify-content: center;
+    max-width: 77vw;
+}
+.video {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.gpbadge {
+    height: 100px;
+    width: auto;
+}
+.applebadge {
+    height: 67px;
+    width: auto;
+    padding-bottom: 12px;
+}
+.badges {
+    display: inline-block;
+}
+
+/* Track */
+::ng-deep ::-webkit-scrollbar-track {
+    background: #00e9e6;
+    background-size: auto 100%;
+    background-position-x: 95%;
+  }
+
+  @media only screen and (max-width: 1080px) {
+    ::ng-deep ::-webkit-scrollbar-track {
+      background: #000000;
+      background-image: none;
+    }
+    .scale {
+        pointer-events: none;
+    }
+  }

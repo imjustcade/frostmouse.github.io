@@ -1,7 +1,7 @@
 <div style="text-align:center">
     <div class="main">
       <div class="games" [style.height.px]="height" *ngFor="let game of gameList">
-        <a class="images" href="/games/{{game.name}}">
+        <a class="images" href="/games/{{game.link}}">
           <h1 class="header" [ngStyle]="{'color':'white'}">
             {{game.name}}
           </h1>

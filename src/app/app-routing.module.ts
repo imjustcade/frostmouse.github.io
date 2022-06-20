@@ -2,18 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about';
 import { GamesComponent } from './games';
-import { VainMinerComponent } from './games/Vain Miner';
+import { IMAMinerComponent } from './games/IMAMiner';
+import { PolyvadeComponent } from './games/Polyvade';
 import { HomeComponent } from './home';
-import { PrivacyComponent } from './privacy';
+import { IMAPrivacyComponent } from './privacy';
+import { PolyPrivacyComponent } from './privacy/polyPrivacy.component';
 import { TermsComponent } from './terms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'games', component: GamesComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'vain-miner-privacy', component: PrivacyComponent },
-  { path: 'vain-miner-terms', component: TermsComponent },
-  { path: 'games/VainMiner', component: VainMinerComponent },
+  { path: 'IMAMinerPrivacy', component: IMAPrivacyComponent },
+  { path: 'PolyPrivacy', component: PolyPrivacyComponent },
+  { path: 'IMAMinerTerms', component: TermsComponent },
+  { path: 'games/IMAMiner', component: IMAMinerComponent },
+  { path: 'games/Polyvade', component: PolyvadeComponent },
 
   { path: '**', redirectTo: '' }
 ];

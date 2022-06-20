@@ -1,1 +1,2 @@
-export * from './privacy.component';
+export * from './IMAPrivacy.component';
+export * from './polyPrivacy.component';

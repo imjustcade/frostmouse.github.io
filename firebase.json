@@ -1,0 +1,40 @@
+{
+  "hosting": {
+    "public": "docs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/games",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/games/IMAMiner",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/IMAMinerPrivacy",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/IMAMinerTerms",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/games/Polyvade",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/PolyPrivacy",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

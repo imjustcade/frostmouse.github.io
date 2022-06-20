@@ -1,1 +1,1 @@
-ng build --baseHref="/"
+cmd /k ng build --baseHref="/"

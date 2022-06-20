@@ -1,0 +1,33 @@
+<div class="main">
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/9WrsdmAOA2s?controls=1&rel=0&loop=1&playlist=9WrsdmAOA2s&autoplay=1&showinfo=0" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay data-keepplaying>
+    </iframe>
+    <h1 class="header" [ngStyle]="{'color':'white'}">
+        About IMA Miner
+    </h1>
+    <p class="paragraph" [ngStyle]="{'color':'white'}">
+        Collect ore as you mine out the world so you can upgrade your ship to go deeper. As you go deeper the ores will become more valuable and the journey back home will become harder. 
+        Don't let your drill run out of fuel or hit the ground too hard because you'll lose your hard-earned money. Purchase items to help you with your journey to become the best miner around. 
+        Dynamite will help you clear out tiles above to reach ore that isn't in your tunnel's path or save you from running out of fuel a row under your escape route. 
+        Flares can be used to help you find your way back, or see what's not in range of your light. 
+        Complete contracts to gain a bonus payment for the ores you collect or sell them for a standard price at the Miner’s Market. 
+        Will all your efforts be in Vain or will you be able to make it to the top by making it to the bottom?
+    </p>
+    <!-- <div class="badges">
+        <a href='https://play.google.com/store/apps/details?id=com.FrostMouseStudios.IMAMiner&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="display: inline-block">
+            <img class="gpbadge" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+        </a>
+        <a href="https://apps.apple.com/us/app/ima-miner/id1603924325?itsct=apps_box_badge&amp;itscg=30200" style="display: inline-block; overflow: hidden; border-radius: 13px;">
+            <img class="applebadge" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1641600000&h=99bf4fd7dd02c444a56bd3c2b97d9762" 
+            alt="Download on the App Store" style="border-radius: 13px;">
+        </a>
+    </div> -->
+    <h1 class="header" [ngStyle]="{'color':'white'}">
+        Screenshots
+    </h1>
+    <div class="grid">
+        <div *ngFor="let img of images">
+            <img class="scale" [src]="img" (click)="openDialog(img)">
+        </div>
+    </div>
+</div>

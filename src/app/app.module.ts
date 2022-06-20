@@ -7,10 +7,12 @@ import { AppComponent, SharedImages } from './app.component';
 import { GamesComponent } from './games';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
-import { PrivacyComponent } from './privacy';
+import { IMAPrivacyComponent } from './privacy/IMAPrivacy.component';
+import { PolyPrivacyComponent } from './privacy/polyPrivacy.component';
 import { TermsComponent } from './terms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { openImageDialog, VainMinerComponent } from './games/Vain Miner';
+import { IMAOpenImageDialog, IMAMinerComponent } from './games/IMAMiner';
+import { polyOpenImageDialog, PolyvadeComponent } from './games/Polyvade';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material';
 
@@ -20,10 +22,13 @@ import { MatDialogModule } from '@angular/material';
     HomeComponent,
     GamesComponent,
     AboutComponent,
-    PrivacyComponent,
+    IMAPrivacyComponent,
+    PolyPrivacyComponent,
     TermsComponent,
-    VainMinerComponent,
-    openImageDialog
+    IMAMinerComponent,
+    IMAOpenImageDialog,
+    PolyvadeComponent,
+    polyOpenImageDialog
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,9 @@ import { MatDialogModule } from '@angular/material';
   ],
   providers: [SharedImages],
   bootstrap: [AppComponent],
-  entryComponents: [openImageDialog]
+  entryComponents: [
+    IMAOpenImageDialog,
+    polyOpenImageDialog
+  ]
 })
 export class AppModule { }

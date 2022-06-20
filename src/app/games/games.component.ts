@@ -18,14 +18,23 @@ export class GamesComponent {
 interface Game 
 {
     name: string;
+    link: string;
     image: string;
 }
 
 let games: Game[] = [];
 
-let VainMiner: Game = {
-    name: "VainMiner",
-    image: "/assets/Vain Miner/1.PNG"
+let IMAMiner: Game = {
+    name: "IMA Miner",
+    link: "IMAMiner",
+    image: "/assets/IMAMiner/1.jpg"
 }
 
-games.push(VainMiner);
+let Polyvade: Game = {
+    name: "Polyvade",
+    link: "Polyvade",
+    image:"assets/Polyvade/1.jpg"
+}
+
+games.push(IMAMiner);
+games.push(Polyvade);

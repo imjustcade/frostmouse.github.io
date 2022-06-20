@@ -27,6 +27,7 @@
     height: auto;
     display: block;
     max-width: 77vw;
+    max-height: 202px;
 }
 .header {
     margin: auto;
